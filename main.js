@@ -59,17 +59,31 @@ function question3 () {
 
 // 4: Display a list of all items who are made of wood.
 function question4 () {
-    let material = [];
-    for (let i = 0 ; i < data.length ; i ++) {
-    for (let j = 0; j < data[i].materials.length ; j++) {
-        if (data[i].materials[j] === "wood") {
-            material.push(data[i].title);
-        }
-      }
-    }
-    return material;
+ let tree = [];
+ for (let i = 0; i < data.length; i++) {
+   let materials = data[i].materials
+   for (let j = 0; j < materials.length; j++) {
+     if (materials[j] === "wood") {
+       tree.push(data[i].title);
+     }
+   }
+ }
+ console.log(tree);
 }
-console.log(question4());
+
+
+// function question4 () {
+//     let material = [];
+//     for (let i = 0 ; i < data.length ; i ++) {
+//     for (let j = 0; j < data[i].materials.length ; j++) {
+//         if (data[i].materials[j] === "wood") {
+//             material.push(data[i].title);
+//             // material.push(data[j].materials);
+//         }
+//       }
+//     }
+// }
+// console.log(question4());
 // Answer:
 //set for a wood
 //set a condition
@@ -97,7 +111,9 @@ function question5() {
         //  etsy.push("item name :" data[i].title + "how many item : " + etsy.length + "item material : " + data[i].materials)
     }
   // Answer:
-}  console.log("item : " + etsy + "Total item : " + etsy.length + "material : " + items );
+
+}  console.log("Item: " + etsy[0] + " " +  items[0] + " item2 :" + etsy[1] + " " +  items[1]) ;
+// console.log("item : " + etsy + "Total item : " + etsy.length + "material : " + items );
 }
 console.log(question5());
 
@@ -119,4 +135,4 @@ function question6 () {
   console.log(made.length);
 }
 
-console.log(question6());
+console.log(question6() + "items were made by their sellers.");
